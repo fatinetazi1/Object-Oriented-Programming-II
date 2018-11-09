@@ -1,0 +1,38 @@
+run-test1: test1
+	./test1
+
+test1: Fraction.h Fraction.cpp test1.cpp
+	g++ -Wall -o test1 Fraction.cpp test1.cpp
+
+run-test1: test2
+	./test2
+
+test2: Fraction.h Fraction.cpp test2.cpp
+	g++ -Wall -o test2 Fraction.cpp test2.cpp
+
+run-test3: test3
+	./test3
+
+test3: Fraction.h Fraction.cpp test3.cpp
+	g++ -Wall -o test3 Fraction.cpp test3.cpp
+
+run-test4: test4
+	./test4
+
+test4: Fraction.h Fraction.cpp test4.cpp
+	g++ -Wall -o test4 Fraction.cpp test4.cpp
+
+clear:
+	rm test1
+	rm test2
+	rm test3
+	rm test4
+
+run-all: all
+	./test1
+	./test2
+	./test3
+	./test4
+
+all: test1 test2 test3 test4
+
